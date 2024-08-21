@@ -22,6 +22,24 @@ main {
     padding: 2rem;
 }
 
+/* Footer */
+footer {
+    text-align: center;
+    padding: 0.5rem 0;
+    /* Réduire le padding */
+    background-color: rgba(161, 116, 109, 0.6);
+    /* Couleur de fond */
+    color: #fff;
+    /* Couleur du texte */
+    font-size: 0.875rem;
+    /* Taille de la police réduite */
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: auto;
+}
+
 /* Hearder */
 header {
     background-color: #B36A5E;
@@ -335,34 +353,37 @@ nav .nav-links a i {
     }
 }
 
-/* Styles for product detail page */
+/* Product Detail Page */
 .product-detail {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two equal columns */
     gap: 2rem;
     margin-top: 2rem;
-}
-
-.product-images {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    align-items: flex-start;
 }
 
 .product-images img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    object-fit: contain;
+}
+
+.product-images img.main-image {
+    max-width: 400px;
+    /* Limite la largeur maximale de l'image principale */
+    margin: 0 auto;
+    /* Centre l'image */
 }
 
 .thumbnail-images {
     display: flex;
     gap: 1rem;
+    justify-content: center;
 }
 
-/* Styles pour les images miniatures */
 .thumbnail-images img {
-    width: 100px;
+    width: 80px;
     height: auto;
     cursor: pointer;
     border: 2px solid transparent;
@@ -370,11 +391,12 @@ nav .nav-links a i {
 
 .thumbnail-images img.selected {
     border-color: #B36A5E;
-    /* Couleur du carré de sélection */
 }
 
 .product-info {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .product-info h1 {
@@ -398,34 +420,77 @@ nav .nav-links a i {
     color: white;
     border: none;
     cursor: pointer;
+    max-width: 200px;
 }
 
 .product-info .add-to-cart:hover {
     background-color: #8B4A46;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .thumbnail-images img {
-        width: 65px;
-        /* Taille plus petite pour les écrans de moins de 768px */
-        height: auto;
-    }
+.product-images {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
-    .product-images img {
-        max-width: 100%;
-        height: auto;
-    }
-
+/* Ajuster l'espace entre les images et le texte sur les grands écrans */
+@media (min-width: 1024px) {
     .product-detail {
-        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        /* Réduit l'espace entre l'image principale et le texte */
+    }
+
+    .product-images {
+        flex: 2;
+        /* Réduit l'espace occupé par les images */
+    }
+
+    .product-info {
+        flex: 1;
+        /* Augmente l'espace occupé par le texte */
+        margin-left: 1rem;
+        /* Réduit l'espace entre les images et le texte */
     }
 }
 
-@media (max-width: 480px) {
-    .thumbnail-images img {
-        width: 50px;
-        /* Taille encore plus petite pour les écrans de moins de 480px */
-        height: auto;
+/* Pour les écrans plus grands (ordinateurs) */
+@media (min-width: 769px) {
+    .product-detail {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .product-images {
+        flex-direction: row;
+        align-items: flex-start;
+        /* Les images miniatures seront à droite de l'image principale */
+    }
+
+    .thumbnail-images {
+        display: flex;
+        flex-direction: column;
+        /* Les vignettes seront en colonne */
+        gap: 1rem;
+        margin-top: 0;
+    }
+}
+
+/* Pour les petits écrans (mobiles) */
+@media (max-width: 768px) {
+    .product-images {
+        flex-direction: column;
+        align-items: center;
+        /* Centrer les vignettes sous l'image principale */
+    }
+
+    .thumbnail-images {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        /* Les vignettes seront en ligne */
+        gap: 1rem;
+        margin-top: 1rem;
     }
 }
