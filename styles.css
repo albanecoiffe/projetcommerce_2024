@@ -414,16 +414,17 @@ nav .nav-links a i {
     margin-bottom: 2rem;
 }
 
-.product-info .add-to-cart {
+.copy-link {
     padding: 1rem 2rem;
     background-color: #B36A5E;
     color: white;
     border: none;
     cursor: pointer;
-    max-width: 200px;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
-.product-info .add-to-cart:hover {
+.copy-link:hover {
     background-color: #8B4A46;
 }
 

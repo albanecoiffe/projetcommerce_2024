@@ -25,3 +25,15 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.getElementById("copyLinkButton").addEventListener("click", function () {
+    // Obtenir l'URL de la page actuelle
+    const url = window.location.href;
+
+    // Copier l'URL dans le presse-papiers
+    navigator.clipboard.writeText(url).then(function () {
+        alert("Le lien a été copié !");
+    }, function (err) {
+        console.error("Erreur lors de la copie : ", err);
+    });
+});
