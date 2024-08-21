@@ -357,7 +357,6 @@ nav .nav-links a i {
 .product-detail {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* Two equal columns */
     gap: 2rem;
     margin-top: 2rem;
     align-items: flex-start;
@@ -371,9 +370,7 @@ nav .nav-links a i {
 
 .product-images img.main-image {
     max-width: 400px;
-    /* Limite la largeur maximale de l'image principale */
     margin: 0 auto;
-    /* Centre l'image */
 }
 
 .thumbnail-images {
@@ -428,35 +425,7 @@ nav .nav-links a i {
     background-color: #8B4A46;
 }
 
-.product-images {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-/* Ajuster l'espace entre les images et le texte sur les grands écrans */
-@media (min-width: 1024px) {
-    .product-detail {
-        display: flex;
-        justify-content: space-between;
-        gap: 1rem;
-        /* Réduit l'espace entre l'image principale et le texte */
-    }
-
-    .product-images {
-        flex: 2;
-        /* Réduit l'espace occupé par les images */
-    }
-
-    .product-info {
-        flex: 1;
-        /* Augmente l'espace occupé par le texte */
-        margin-left: 1rem;
-        /* Réduit l'espace entre les images et le texte */
-    }
-}
-
-/* Pour les écrans plus grands (ordinateurs) */
+/* Pour les écrans plus larges (ordinateurs) */
 @media (min-width: 769px) {
     .product-detail {
         display: flex;
@@ -464,6 +433,7 @@ nav .nav-links a i {
     }
 
     .product-images {
+        display: flex;
         flex-direction: row;
         align-items: flex-start;
         /* Les images miniatures seront à droite de l'image principale */
@@ -476,21 +446,30 @@ nav .nav-links a i {
         gap: 1rem;
         margin-top: 0;
     }
+
+    .product-images img.main-image {
+        margin-right: 2rem;
+        /* Ajout d'un espace entre l'image principale et les miniatures */
+    }
 }
 
 /* Pour les petits écrans (mobiles) */
 @media (max-width: 768px) {
+    .product-detail {
+        display: flex;
+        flex-direction: column;
+    }
+
     .product-images {
         flex-direction: column;
         align-items: center;
-        /* Centrer les vignettes sous l'image principale */
     }
 
     .thumbnail-images {
         display: flex;
         justify-content: center;
         flex-direction: row;
-        /* Les vignettes seront en ligne */
+        /* Les vignettes seront en ligne sous l'image principale */
         gap: 1rem;
         margin-top: 1rem;
     }
