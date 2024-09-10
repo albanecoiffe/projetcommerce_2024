@@ -4,7 +4,7 @@
 
 Ce projet personnel consiste en la création d'une page web dédiée à l'affichage d'affaires en ventre pour l'équitation. 
 
-## Technologies utilisées
+## 🛠️ Technologies utilisées
 - **HTML/CSS** : Pour la structure et la présentation du site.
 - **JavaScript** : Pour ajouter des fonctionnalités interactives.
 - **GitHub Pages** : Pour héberger la version live du site.
