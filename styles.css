@@ -8,6 +8,10 @@ body {
     flex-direction: column;
 }
 
+.logo a {
+    text-decoration: none;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
