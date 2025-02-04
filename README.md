@@ -1,13 +1,13 @@
-# Projet de Page d'Affaire en Vente d'Équitation
+# Equestrian Sales Page Project
 
-[Page d'affichage des affaires](https://albanecoiffe.github.io/projetcommerce_2024/)   
+[Live demo](https://albanecoiffe.github.io/projetcommerce_2024/)   
 
-Ce projet personnel consiste en la création d'une page web dédiée à l'affichage d'affaires en ventre pour l'équitation. 
-## 📊 Fonctionnalités principales
-- Page principale : Page d'accueil montrant une liste de tous les produits
-- Catalogue de produits : Présentation détaillée des produits, avec images, descriptions, et prix.
+This personal project involves creating a web page dedicated to showcasing equestrian equipment for sale.
+## 📊 Key Features
+- Home Page: Displays a list of all available products.
+- Product Catalog: Detailed presentation of products with images, descriptions, and prices.
 
-## 🛠️ Technologies utilisées
-- **HTML/CSS** : Pour la structure et la présentation du site.
-- **JavaScript** : Pour ajouter des fonctionnalités interactives.
-- **GitHub Pages** : Pour héberger la version live du site.
+## 🛠️ Technologies Used
+- **HTML/CSS**: For the website structure and styling.
+- **JavaScript**: To add interactive features.
+- **GitHub Pages**: For hosting the live version of the site.
